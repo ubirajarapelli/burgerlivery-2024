@@ -1,10 +1,9 @@
 // import { log } from "console"
 
 import Link from "next/link"
+const apiUrl = process.env.NEXT_PUBLIC_API_URL
 
 export default async function Home() {
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL
-
   const response = await fetch(`${apiUrl}/categories`)
   const categories = await response.json()
 
